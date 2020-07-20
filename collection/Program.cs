@@ -6,7 +6,8 @@ namespace collection
     class Program
     {
         public static Forum forum = new Forum();
-        
+        public static int increID = 10000;
+        public static int count = 0;
         public static int ID = 0;
         static void Main(string[] args)
         {
@@ -29,93 +30,123 @@ namespace collection
                         CreatPost();
                         break;
                     case 2:
-                        Console.Write("Enter id: ");
-                        int id = Int32.Parse(Console.ReadLine());
-                        Console.Write("Enter content: ");
-                        string content = Console.ReadLine();
-                        UpdatePost(id, content);
+                        
+                        UpdatePost();
                         break;
                     case 3:
-                        Console.Write("Enter id: ");
-                        int Id = Int32.Parse(Console.ReadLine());
-                        RemovePost(Id);
+                        
+                        RemovePost();
                         break;
                     case 4:
                         ShowPost();
                         break;
                     case 5:
-                        Console.Write("Enter Author: ");
-                        string author = Console.ReadLine();
-                        Console.Write("Enter Title: ");
-                        string Title = Console.ReadLine();
-                        SearchByauthor(author);
-                        SearchByTitle(Title);
+                        Console.WriteLine("choice 1 to search by author, 2 by title:");
+                        int choice2 = Int32.Parse(Console.ReadLine());
+                        while (choice > 2 || choice <1)
+                        {
+                            switch (choice2)
+                            {
+                                case 1:
+                                    SearchByauthor();
+                                    break;
+                                case 2:
+                                    SearchByTitle();
+                                    break;
+                            }
+                        }
                         break;
                     case 6:
-                        Console.Write("Enter id: ");
-                        int Id1 = Int32.Parse(Console.ReadLine());
-                        forum.Rating(Id1);
+                        
+                        Rating();
                         break;
                 }
             }
         }
         public static void CreatPost()
         {
-            //ID++;
-            //Console.WriteLine("Enter title");
-            //newpost.Title = Console.ReadLine();
-            //Console.WriteLine("Enter content");
-            //newpost.Content = Console.ReadLine();
-            //Console.WriteLine("Enter author");
-            //newpost.Author = Console.ReadLine();
-            //Console.WriteLine("Enter id");
-            //Console.Write($"Enter rate for Id({forum.Posts[newpost.Count - 1].Id}):");
-            //newpost.Rates[newpost.Count - 1] = Int32.Parse(Console.ReadLine());
-            //newpost.Id = ID;
-            forum.Add();
+            increID++;
+            count++;
+            var _post = new Post();
+            _post.Id = increID;
+            Console.Write("Title: ");
+            _post.Title = Console.ReadLine();
+            Console.Write("Author: ");
+            _post.Author = Console.ReadLine();
+            Console.Write("Content: ");
+            _post.Content = Console.ReadLine();
+            int value;
+            Console.WriteLine("Enter the Rate for post from 1 to 5:");
+            string x = Console.ReadLine();
+            bool tam1 = (int.TryParse(x, out value));
+            while (!tam1 || value > 5 || value < 0)
+            {
+                Console.WriteLine("Enter just number Rate from 1 to 5");
+                x = Console.ReadLine();
+                tam1 = (int.TryParse(x, out value));
+            }
+            _post.Rates.Add(Int32.Parse(x));
+            _post.CalculatorRate();
+            _post.Count = count;
+            forum.Add(increID, _post);
             
         }
-        public static void UpdatePost(int Id, string Content)
+        public static void UpdatePost()
         {
+            Console.Write("Enter id: ");
+            int Id = Int32.Parse(Console.ReadLine());
+            Console.Write("Enter content: ");
+            string Content = Console.ReadLine();
             forum.Update(Id, Content);
         }
-        public static void RemovePost(int Id)
+        public static void RemovePost()
         {
+            Console.Write("Enter id: ");
+            int Id = Int32.Parse(Console.ReadLine());
             forum.Remove(Id);
         }
         public static void ShowPost()
         {
             forum.Show();
         }
-        public static void SearchByauthor(string Author)
+        public static void SearchByauthor()
         {
+            Console.Write("Enter Author: ");
+            string Author = Console.ReadLine();
+            
             forum.SearchByauthor(Author);
         }
-        public static void SearchByTitle(string Title)
+        public static void SearchByTitle()
         {
+            Console.Write("Enter Title: ");
+            string Title = Console.ReadLine();
             forum.SearchByTitle(Title);
         }
-        //public static void Rating(int Id)
-        //{
-        //    bool tam = false;
-        //    if (Posts.ContainsKey(idKey)) {
-        //        int value;
-        //        Console.WriteLine("Enter the Rate for post from 1 to 5:");
-        //        string x = Console.ReadLine();
-        //        bool tam1 = (int.TryParse(x, out value));
-        //        while (!tam1 || value > 6 || value < 0)
-        //        {
-        //            Console.WriteLine("Enter just number Rate from 1 to 5");
-        //            x = Console.ReadLine();
-        //            tam1 = (int.TryParse(x, out value));
-        //        }
-        //        newpost.Rates[i] = Int32.Parse(x);
-        //        tam = true;
-        //    }
-        //    if(tam == false)
-        //    {
-        //        Console.WriteLine("Invalid Post");
-        //    }
-        //}
+        public static void Rating()
+        {
+            Console.Write("Enter id: ");
+            int idKey = Int32.Parse(Console.ReadLine());
+            bool tam = false;
+            if (forum.Posts.ContainsKey(idKey))
+            {
+                int value;
+                Console.WriteLine("Enter the Rate for post from 1 to 5:");
+                string x = Console.ReadLine();
+                bool tam1 = (int.TryParse(x, out value));
+                while (!tam1 || value > 5 || value < 0)
+                {
+                    Console.WriteLine("Enter just number Rate from 1 to 5");
+                    x = Console.ReadLine();
+                    tam1 = (int.TryParse(x, out value));
+                }
+                forum.Posts[idKey].Rates.Add(Int32.Parse(x));
+                forum.Posts[idKey].CalculatorRate();
+                tam = true;
+            }
+            if (tam == false)
+            {
+                Console.WriteLine("Invalid Post");
+            }
+        }
     }
 }

@@ -1,0 +1,13 @@
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\bin\Debug\netcoreapp3.1\matrixrectangle.exe
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\bin\Debug\netcoreapp3.1\matrixrectangle.deps.json
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\bin\Debug\netcoreapp3.1\matrixrectangle.runtimeconfig.json
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\bin\Debug\netcoreapp3.1\matrixrectangle.runtimeconfig.dev.json
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\bin\Debug\netcoreapp3.1\matrixrectangle.dll
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\bin\Debug\netcoreapp3.1\matrixrectangle.pdb
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.csprojAssemblyReference.cache
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.AssemblyInfoInputs.cache
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.AssemblyInfo.cs
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.csproj.CoreCompileInputs.cache
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.dll
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.pdb
+C:\Users\Hoang\source\repos\baitaptonhop\collection\matrixrectangle\obj\Debug\netcoreapp3.1\matrixrectangle.genruntimeconfig.cache

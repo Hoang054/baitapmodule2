@@ -1,0 +1,13 @@
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\bin\Debug\netcoreapp3.1\mang2chieu.exe
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\bin\Debug\netcoreapp3.1\mang2chieu.deps.json
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\bin\Debug\netcoreapp3.1\mang2chieu.runtimeconfig.json
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\bin\Debug\netcoreapp3.1\mang2chieu.runtimeconfig.dev.json
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\bin\Debug\netcoreapp3.1\mang2chieu.dll
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\bin\Debug\netcoreapp3.1\mang2chieu.pdb
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.csprojAssemblyReference.cache
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.AssemblyInfoInputs.cache
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.AssemblyInfo.cs
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.csproj.CoreCompileInputs.cache
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.dll
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.pdb
+C:\Users\Hoang\source\repos\baitaptonhop\collection\mang2chieu\obj\Debug\netcoreapp3.1\mang2chieu.genruntimeconfig.cache

@@ -10,32 +10,10 @@ namespace collection
         public SortedList<int, Post> Posts = new SortedList<int, Post>();
         public static int increID = 10000;
         public static int count = 0;
-        public void Add()
+        public void Add(int Id,Post _post)
         {
-            increID++;
-            count++;
-            var _post = new Post();
-            _post.Id = increID;
-            Console.Write("Title: ");
-            _post.Title = Console.ReadLine();
-            Console.Write("Author: ");
-            _post.Author = Console.ReadLine();
-            Console.Write("Content: ");
-            _post.Content = Console.ReadLine();
-            int value;
-            Console.WriteLine("Enter the Rate for post from 1 to 5:");
-            string x = Console.ReadLine();
-            bool tam1 = (int.TryParse(x, out value));
-            while (!tam1 || value > 5 || value < 0)
-            {
-                Console.WriteLine("Enter just number Rate from 1 to 5");
-                x = Console.ReadLine();
-                tam1 = (int.TryParse(x, out value));
-            }
-            _post.Rates.Add(Int32.Parse(x));
-            _post.CalculatorRate();
-            _post.Count = count;
-            Posts.Add(_post.Id, _post);
+            
+            Posts.Add(Id, _post);
            
         }
         public void Update(int Id, string Content)
@@ -71,7 +49,7 @@ namespace collection
                 if (Posts[idk].Author == author)
                 {
                     keyByAuthor = idk;
-                    break;
+                    
                 }
             }
             if (keyByAuthor != -1)
@@ -89,7 +67,7 @@ namespace collection
                 if (Posts[key].Title == title)
                 {
                     keyByTitle = key;
-                    break;
+                    
                 }
             }
             if(keyByTitle != -1)
@@ -99,29 +77,6 @@ namespace collection
                 Console.WriteLine("not found");
             }
         }
-        public void Rating(int idKey)
-        {
-            bool tam = false;
-            if (Posts.ContainsKey(idKey))
-            {
-                int value;
-                Console.WriteLine("Enter the Rate for post from 1 to 5:");
-                string x = Console.ReadLine();
-                bool tam1 = (int.TryParse(x, out value));
-                while (!tam1 || value > 5 || value < 0)
-                {
-                    Console.WriteLine("Enter just number Rate from 1 to 5");
-                    x = Console.ReadLine();
-                    tam1 = (int.TryParse(x, out value));
-                }
-                Posts[idKey].Rates.Add(Int32.Parse(x));
-                Posts[idKey].CalculatorRate();
-                tam = true;
-            }
-            if (tam == false)
-            {
-                Console.WriteLine("Invalid Post");
-            }
-        }
+        
     }
 }
